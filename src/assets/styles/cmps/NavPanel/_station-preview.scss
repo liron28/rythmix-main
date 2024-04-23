@@ -1,0 +1,55 @@
+
+  .station-preview {
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px; 
+    padding: 20px 0 15px 15px;
+    border-radius: 4px;
+
+    .thumbnail{
+        min-width: 48px;
+        min-height: 48px;
+        max-width: 48px;
+        max-height: 48px;
+    }
+  
+      &.station-active {
+        background-color: lighten($bg-clr-secondary, 7.5%);
+        border-radius: 4px;
+      }
+      
+      a {
+        display: contents; 
+      }
+    
+  
+    .station-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px; 
+    }
+  
+    h2 {
+      font-size: 0.9rem;
+      color: #fff;
+      margin: 3px;
+      grid-column: 2; 
+    }
+  
+    h4 {
+      font-size: 0.7rem;
+      color: $elem-clr-secondary;
+      margin: 3px;
+      grid-column: 2; 
+    }
+  
+    h6 {
+      font-size: 0.9rem; 
+      color: #fff; 
+      margin: 0;
+      grid-column: 2;
+    }
+  }
+  

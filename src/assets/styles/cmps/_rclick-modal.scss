@@ -1,0 +1,39 @@
+.rclick-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // min-height: 100vh;
+}
+
+.wrapper{
+    visibility: hidden;
+    width: 300px;
+    background: #282828;
+    border-radius: 10px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.1) ;
+    .menu{
+        padding: 10px 12px;
+    }
+}
+
+.content{
+    .modal-list{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-size: 22px;
+        height: 50px;
+        border-radius: 5px;
+        margin-bottom: 2px;
+        padding: 0 5px 0 10px;
+        width: 100%;
+        
+        &:hover{
+            background: #3e3e3e;
+        }
+    }
+}
+
+.modal-list{
+
+}

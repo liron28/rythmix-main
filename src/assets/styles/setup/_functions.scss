@@ -1,0 +1,28 @@
+// REM Functions
+@function rem($size) {
+    $remSize: calc($size / 16px);
+    @return calc($remSize * 1rem);
+}
+
+// EM Functions
+@function em($pixels, $context: 16px) {
+    @return calc(($pixels/$context) * 1em);
+}
+
+// Color functions
+@function change-opacity($color, $difference) {
+  // Extract RGBA components
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+  $alpha: alpha($color);
+
+  // Calculate new opacity
+  $new-alpha: $alpha + $difference;
+
+  // Clamp alpha value between 0 and 1
+  $new-alpha: max(min($new-alpha, 1), 0);
+
+  // Return the color with the new opacity
+  @return rgba($red, $green, $blue, $new-alpha);
+}

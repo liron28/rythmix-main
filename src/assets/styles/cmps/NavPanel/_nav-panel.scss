@@ -1,0 +1,23 @@
+.nav-panel {
+  gap: $grid-gap;
+  height: 100%;
+
+  @include for-mobile-layout {
+    grid-row: 2;
+    width: 100%;
+  }
+
+  @include for-narrow-layout {
+    grid-row: 1;
+    width: 420px;
+    display: grid;
+    grid-template-rows: 112px 1fr;
+  }
+  
+  @include for-normal-layout {
+    grid-row: 1;
+    width: 420px;
+    display: grid;
+    grid-template-rows: 112px 1fr;
+  }
+}

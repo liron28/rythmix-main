@@ -1,0 +1,290 @@
+// Font Sizes
+.fs12 {
+  font-size: rem(12px);
+}
+.fs13 {
+  font-size: rem(13px);
+}
+.fs14 {
+  font-size: rem(14px);
+}
+.fs16 {
+  font-size: rem(16px);
+}
+.fs18 {
+  font-size: rem(18px);
+}
+.fs20 {
+  font-size: rem(20px);
+}
+.fs24 {
+  font-size: rem(24px);
+}
+.fs28 {
+  font-size: rem(28px);
+}
+.fs30 {
+  font-size: rem(30px);
+}
+.fs40 {
+  font-size: rem(40px);
+}
+.fs50 {
+  font-size: rem(50px);
+}
+.fs60 {
+  font-size: rem(60px);
+}
+.fs70 {
+  font-size: rem(70px);
+}
+
+// Font weight classes
+.font-thin {
+  font-weight: $font-weight-thin;
+}
+
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-semi-bold {
+  font-weight: $font-weight-semi-bold;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+.font-black {
+  font-weight: $font-weight-black;
+}
+
+// flex helpers
+.flex {
+  display: flex;
+
+  > *.full {
+    flex: 1;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-end {
+    justify-content: end;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.gap-4 {
+    gap: 4px;
+  }
+  &.gap-8 {
+    gap: 8px;
+  }
+  &.gap-12 {
+    gap: 12px;
+  }
+  &.gap-16 {
+    gap: 16px;
+  }
+  &.gap-20 {
+    gap: 20px;
+  }
+}
+
+// Media helpers
+.square-ratio {
+  @include aspect-ratio(1, 1);
+}
+
+.video-ratio {
+  @include aspect-ratio(16, 9);
+}
+
+.portrait-ratio {
+  @include aspect-ratio(9, 16);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Padding
+.p-0 {
+  padding: 0;
+}
+.p-2 {
+  padding: 2px;
+}
+.p-4 {
+  padding: 4px;
+}
+.p-8 {
+  padding: 8px;
+}
+.p-12 {
+  padding: 12px;
+}
+.p-16 {
+  padding: 16px;
+}
+.ph-4 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.ph-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.ph-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.ph-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.pv-4 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.pv-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.pv-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+// Margin
+.ml-auto {
+  margin-left: auto;
+}
+.m-0 {
+  margin: 0;
+}
+.my-16 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+// Background
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-inherit {
+  background-color: inherit;
+}
+
+// Border &  radius
+.border-none {
+  border: none;
+}
+
+.radiused {
+  border-radius: $container-border-radius;
+}
+
+.br-0,
+.br-none {
+  border-radius: 0;
+}
+
+.br-4 {
+  border-radius: 4px;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+// Overflow
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// Scroll
+.scrollable-y {
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $bg-clr-secondary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb-clr;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $scrollbar-hover-clr;
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background: $scrollbar-drag-clr;
+  }
+}
+
+.song-hover {
+  &:hover {
+    background-color: change-opacity($elem-clr-secondary, -0.8);
+    border-radius: 4px;
+  }
+}
+
+.station-hover {
+  &:hover {
+    background-color: change-opacity($elem-clr-secondary, -0.95);
+    border-radius: 4px;
+  }
+}
+
+.station-active{
+  &:active {
+    background-color: $bg-clr-primary;
+    border-radius: 4px;
+  }
+}
+
+.box-shadow-light {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.box-shadow-medium {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.box-shadow-bold {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.box-shadow-extra-bold {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}

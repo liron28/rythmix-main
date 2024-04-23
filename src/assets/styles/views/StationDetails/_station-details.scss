@@ -1,0 +1,43 @@
+.station-details {
+  @include for-mobile-layout {
+    padding: 0;
+    .station-details-header {
+      margin: 0 20px;
+      h6 {
+        font-size: rem(14px);
+      }
+      h2 {
+        font-size: rem(44px);
+      }
+    }
+  }
+
+  @include for-narrow-layout {
+    padding: 0 20px;
+    .station-details-header {
+      h6 {
+        font-size: rem(18px);
+      }
+      h2 {
+        font-size: rem(64px);
+      }
+    }
+  }
+
+  @include for-normal-layout {
+    padding: 0 20px;
+    .station-details-header {
+      h6 {
+        font-size: rem(22px);
+      }
+      h2 {
+        font-size: rem(72px);
+      }
+    }
+  }
+
+  .thumbnail {
+    min-width: 128px;
+    max-width: 232px;
+  }
+}

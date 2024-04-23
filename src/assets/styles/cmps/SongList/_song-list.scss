@@ -1,0 +1,40 @@
+.song-list {
+  display: grid;
+  border-radius: 0;
+  color: $elem-clr-secondary;
+
+  @include for-mobile-layout {
+    grid-template-columns: 64px 1fr 64px;
+    .song-date-added {
+      display: none;
+    }
+  }
+
+  @include for-narrow-layout {
+    grid-template-columns: 64px minmax(auto, 1fr) 64px;
+    .song-date-added {
+      display: none;
+    }
+  }
+
+  @include for-normal-layout {
+    grid-template-columns: 64px 2fr 1fr 64px;
+    .song-date-added {
+      display: block;
+    }
+  }
+
+  header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: 1;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: $elem-clr-secondary;
+    }
+  }
+}

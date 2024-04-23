@@ -1,0 +1,192 @@
+.player-panel {
+  @include for-mobile-layout {
+    .song-info,
+    .volume-controls {
+      display: none;
+    }
+  }
+
+  @include for-narrow-layout {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 72px;
+
+    .song-info,
+    .volume-controls {
+      display: flex;
+    }
+  }
+
+  @include for-normal-layout {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 72px;
+
+    .song-info,
+    .volume-controls {
+      display: flex;
+    }
+  }
+
+  button {
+    padding: 0;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+
+    svg {
+      fill: $elem-clr-secondary;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  button:hover {
+    svg {
+      fill: white;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  button:active {
+    width: 32px;
+    height: 32px;
+
+    svg {
+      fill: $elem-clr-secondary;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .slider {
+    .MuiSlider-rail {
+      background-color: lightgray;
+    }
+
+    .MuiSlider-track {
+      border: none;
+      background-color: white;
+    }
+
+    .MuiSlider-thumb {
+      box-shadow: none;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .slider:hover {
+    .MuiSlider-track {
+      border: none;
+      background-color: $elem-clr-accent;
+    }
+
+    .MuiSlider-thumb {
+      background-color: white;
+      box-shadow: none;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .song-info {
+    grid-column: 1 / span 1;
+    gap: 16px;
+    padding-left: 8px;
+    margin-right: 16px;
+    overflow: hidden;
+    
+    .thumbnail {
+      min-width: 56px;
+      min-height: 56px;
+      max-width: 56px;
+      max-height: 56px;
+    }
+    
+    .title-wrapper {
+      gap: 3px;
+      
+      span {
+        white-space: nowrap;
+      }
+
+      .author-title {
+        color: $elem-clr-secondary;
+      }
+    }
+  }
+
+  .playback-controls {
+    grid-column: 2;
+    gap: 2px;
+
+    .playback-buttons {
+      gap: 16px;
+
+      .play-btn {
+        background-color: white;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        margin: 1px;
+
+        svg {
+          fill: black;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      .play-btn:hover {
+        width: 34px;
+        height: 34px;
+        margin: 0;
+
+        svg {
+          fill: black;
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .play-btn:active {
+        width: 32px;
+        height: 32px;
+        margin: 1px;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .progress {
+      gap: 10px;
+
+      .elapsed,
+      .duration {
+        color: $elem-clr-secondary;
+      }
+    }
+  }
+
+  .volume-controls {
+    grid-column: 3;
+    gap: 2px;
+    padding-right: 16px;
+
+    .volume-btn {
+      background-color: transparent;
+      z-index: 1;
+    }
+
+    .slider {
+      width: 93px;
+    }
+  }
+}

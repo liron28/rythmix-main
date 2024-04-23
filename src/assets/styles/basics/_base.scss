@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+
+  background-color: $bg-clr-primary;
+  color: $elem-clr-primary;
+
+  font-family: $font-family-primary;
+  letter-spacing: $letter-spacing;
+  font-size: rem(18px);
+
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0;
+  line-height: 1;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid;
+  border-color: rgba(167, 167, 167, 0.25);
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+div,
+nav,
+header,
+footer,
+article,
+section {
+  border-radius: $container-border-radius;
+}
+
+button {
+  font-family: $font-family-primary;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+svg {
+  fill: $elem-clr-secondary;
+}

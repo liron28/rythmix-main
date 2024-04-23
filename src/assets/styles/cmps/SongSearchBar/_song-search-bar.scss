@@ -1,0 +1,96 @@
+.song-search-bar {
+  .input-wrapper {
+    background-color: change-opacity($elem-clr-secondary, -0.85);
+    padding: 8px 32px 8px 0px;
+    margin-top: 24px;
+    width: 365px;
+  }
+
+  svg {
+    fill: lighten($elem-clr-secondary, 10%);
+    margin: 0px 8px;
+  }
+
+  input[type="text"] {
+    caret-color: lighten($elem-clr-secondary, 10%);
+    color: lighten($elem-clr-secondary, 10%);
+    flex-grow: 1;
+    font-size: rem(14px);
+    padding: 0;
+    height: 24px;
+  }
+
+  input[type="text"]::placeholder {
+    color: lighten($elem-clr-secondary, 10%);
+    font-size: rem(14px);
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+  }
+
+  .search-results-list {
+    display: grid;
+    grid-template-columns: auto 5fr 1fr;
+
+    .search-result {
+      border-radius: 4px;
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: subgrid;
+      gap: 16px;
+      align-items: center;
+      height: 56px;
+      padding: 8px 8px;
+
+      &:hover {
+        background-color: #2a2a2a;
+      }
+
+      .thumbnail {
+        min-width: 40px;
+        min-height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+      }
+
+      span {
+        white-space: nowrap; /* Prevent text from breaking into multiple lines */
+        overflow: hidden; /* Hide any overflow */
+        text-overflow: ellipsis; /* Optionally add ellipsis (...) for indication of hidden text */
+      }
+
+      button {
+        background-color: transparent;
+        border: 1px solid darken($elem-clr-secondary, $amount: 20%);
+        border-radius: 999px;
+        color: white;
+        font-size: rem(14px);
+        font-weight: 600;
+        margin: 0;
+        padding: 3px 15px;
+        height: 36px;
+        width: 64px;
+      }
+
+      button:hover {
+        border: 2.15px solid $elem-clr-secondary;
+        font-size: rem(15px);
+        height: 37px;
+        width: 65px;
+      }
+
+      button:active {
+        border: 1px solid darken($elem-clr-secondary, $amount: 20%);
+        color: $elem-clr-secondary;
+        height: 36px;
+        width: 64px;
+      }
+    }
+  }
+
+  .no-results-msg {
+    color: $elem-clr-secondary;
+    margin: 32px 0;
+  }
+}

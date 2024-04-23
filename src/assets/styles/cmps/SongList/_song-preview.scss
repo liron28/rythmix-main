@@ -1,0 +1,44 @@
+.song-preview {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+
+  @include for-mobile-layout {
+    .song-date-added {
+      display: none;
+    }
+  }
+
+  @include for-narrow-layout {
+    .song-date-added {
+      display: none;
+    }
+  }
+
+  @include for-normal-layout {
+    .song-date-added {
+      display: flex;
+    }
+  }
+
+  &:active {
+    background-color: change-opacity($elem-clr-secondary, -0.5);
+  }
+
+  .song-name {
+    color: $elem-clr-primary;
+  }
+
+  .thumbnail {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  span {
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Optionally add ellipsis (...) for indication of hidden text */
+  }
+}

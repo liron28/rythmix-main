@@ -1,0 +1,31 @@
+// _typography.scss
+
+// Define font variables
+$font-family-primary: 'Noto Sans', sans-serif;
+$font-family-secondary: Arial, sans-serif; // Fallback font if Noto Sans is not available
+
+// Define font sizes
+$font-size-base: 16px; // Base font size, adjust as needed
+
+// Define font weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 800;
+
+// Define line heights
+$line-height-base: 1.5; // Adjust as needed
+
+// Define heading styles
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+// Letter spacing
+$letter-spacing: -0.025em; // 2.5% reduction

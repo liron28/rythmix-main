@@ -1,0 +1,52 @@
+.top-bar {
+  background-color: $bg-clr-secondary;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  @include for-mobile-layout {
+    nav {
+      display: none;
+    }
+  }
+
+  @include for-narrow-layout {
+    nav {
+      display: flex;
+    }
+  }
+
+  @include for-normal-layout {
+    nav {
+      display: flex;
+    }
+  }
+
+  nav {
+    button {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .account-controls-wrapper {
+    .sign-up-btn {
+      color: $elem-clr-secondary;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .login-btn {
+      color: black;
+      background-color: white;
+      padding: 12px 32px;
+      border-radius: 32px;
+    }
+
+    .account-btn {
+      display: none;
+    }
+  }
+}

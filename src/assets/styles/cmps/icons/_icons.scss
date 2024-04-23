@@ -1,0 +1,45 @@
+.library-svg {
+  fill: $elem-clr-secondary;
+  width: 25px;
+  height: 25px;
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.delete-icon{
+  fill: $elem-clr-secondary;
+  width: 16px;
+  height: 16px;
+}
+
+.edit-icon{
+  fill: $elem-clr-secondary;
+  width: 16px;
+  height: 16px;
+}
+.add-station-icon{
+  fill: $elem-clr-secondary;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+
+  &:hover{
+    fill: $elem-clr-primary;
+    transition: 0.3s;  
+  }
+}
+
+.create-station-icon{
+  fill: $elem-clr-secondary;
+  width: 16px;
+  height: 16px;
+}
+
+.close-icon{
+  fill: $elem-clr-secondary;
+  width: 16px;
+  height: 16px;
+}
